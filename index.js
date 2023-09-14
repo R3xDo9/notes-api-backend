@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-
+const cors=require('cors')
 const logger=require('./loggerMiddleware')
 
 app.use(express.json())
-
+app.use(cors())
 app.use(logger)
 
 let notes = [
@@ -85,7 +85,7 @@ app.use((request,response)=>{
         error:'Not found'
     })
 })
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log(`Server runing on port ${PORT}`)
 })
