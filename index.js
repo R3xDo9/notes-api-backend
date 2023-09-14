@@ -31,7 +31,7 @@ let notes = [
 ]
 
 app.get('/', (request, response) => {
-    response.send('<h1>Hola mundo!!</h1>')
+    response.send('<h1>Hola a todos como estasi!! mundo!!</h1>')
 })
 app.get('/api/', (request, response) => {
     response.send('<h1>Que tal todo!!</h1><p>HOla putooooo</p>')
